@@ -1,0 +1,6 @@
+name: 'vpsde'
+beta_max: 10.
+beta_min: 0.01
+T_max: 1.
+T_min: 1e-5
+scale_min: 1e-3

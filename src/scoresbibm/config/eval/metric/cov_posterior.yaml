@@ -1,0 +1,8 @@
+
+cov_posterior:
+    num_samples: 5000
+    condition_mask_fn: posterior
+    batch_size: 500
+    num_bins: 50
+    sample_kwargs: {"num_steps": 200, "sampling_method": "sde"}
+    log_prob_kwargs: {"num_steps": 200}

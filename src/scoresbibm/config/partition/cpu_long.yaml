@@ -1,0 +1,10 @@
+# @package _global_
+
+hydra:
+  mode: MULTIRUN
+  launcher:
+    timeout_min: 3000 
+    partition: cpu-galvani
+    gres: null
+    cpus_per_task: 16
+    mem_gb: 16

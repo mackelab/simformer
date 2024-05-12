@@ -1,0 +1,8 @@
+
+cov_likelihood:
+    num_samples: 50
+    condition_mask_fn: likelihood
+    batch_size: 50
+    num_bins: 50
+    sample_kwargs: {"num_steps": 200, "sampling_method": "sde"}
+    log_prob_kwargs: {"num_steps": 200}

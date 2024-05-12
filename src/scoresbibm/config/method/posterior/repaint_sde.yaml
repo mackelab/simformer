@@ -1,0 +1,4 @@
+
+sampling_method: "repaint"
+num_steps: 500
+resampling_steps: 0

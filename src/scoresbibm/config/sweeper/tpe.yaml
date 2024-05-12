@@ -1,0 +1,36 @@
+# @package _global_
+
+sweeper:
+  name: tpe
+  objective: c2st
+  direction: minimize
+
+
+defaults:
+  - override /hydra/sweeper: optuna
+  - override /partition: gpu
+
+hydra:
+  mode: MULTIRUN
+
+  sweeper:
+    sampler:
+      _target_: optuna.samplers.TPESampler
+      seed: 0
+      consider_prior: true
+      prior_weight: 1.0
+      consider_magic_clip: true
+      consider_endpoints: false
+      n_startup_trials: 20
+      n_ei_candidates: 24
+      warn_independent_sampling: true
+      multivariate: true
+    _target_: hydra_plugins.hydra_optuna_sweeper.optuna_sweeper.OptunaSweeper
+    direction: ${sweeper.direction}
+    study_name: rbibm_sweep
+    n_trials: 200
+    n_jobs: 20
+
+    
+save_model: false
+save_summary: false

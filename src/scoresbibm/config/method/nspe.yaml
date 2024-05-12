@@ -1,0 +1,11 @@
+
+name: nspe 
+backend: jax
+device: gpu
+
+defaults:
+  - model: score_mlp
+  - train: train_score_mlp
+  - sde: vpsde
+  - posterior: backward_sde
+

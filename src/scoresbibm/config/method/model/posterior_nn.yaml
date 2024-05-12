@@ -1,0 +1,10 @@
+
+
+model: "nsf"
+z_score_theta: 'independent'
+z_score_x: 'independent'
+hidden_features: 50
+hidden_layers: 2
+num_transforms: 5
+num_bins: 10
+num_components: 10

@@ -1,0 +1,24 @@
+# @package _global_
+name: bm_additional
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      method: score_transformer,score_transformer_undirected,score_transformer_directed
+      method/sde: vesde
+      method/model: score_transformer_small
+      task: gaussian_mixture,two_moons,slcp,gaussian_linear
+      eval: nll_cov
+      task.num_simulations: 1000,10000,100000
+    
+  run:
+    dir: results/${name}
+  sweep:
+    dir: results/${name}
+    subdir: ${hydra.job.override_dirname}
+
+
+defaults:
+  - _self_
+  - override /partition: gpu

@@ -1,0 +1,10 @@
+# @package _global_
+
+hydra:
+  mode: MULTIRUN
+  launcher:
+    timeout_min: 700
+    gres: gpu
+    partition: gpu-v100
+    cpus_per_task: 4
+    mem_gb: 32

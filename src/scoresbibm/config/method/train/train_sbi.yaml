@@ -1,0 +1,6 @@
+training_batch_size: 1000
+learning_rate: 1e-3
+validation_fraction: 0.1
+stop_after_epochs: 20
+max_num_epochs: 2147483647
+clip_max_norm: 5.

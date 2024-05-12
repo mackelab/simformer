@@ -1,0 +1,36 @@
+# @package _global_
+
+sweeper:
+  name: tpe_multi_objective
+  objective:
+    - c2st
+    - c2st
+  direction:
+    - minimize
+    - minimize
+
+defaults:
+  - override /hydra/sweeper: optuna
+  - override /hydra/sweeper/sampler: motpe
+
+hydra:
+  mode: MULTIRUN
+
+  sweeper:
+    sampler:
+      _target_: optuna.samplers.MOTPESampler
+      seed: 0
+      consider_prior: true
+      prior_weight: 1.0
+      consider_magic_clip:  true
+      consider_endpoints:  false
+      n_startup_trials:  200
+      n_ehvi_candidates:  24
+    _target_: hydra_plugins.hydra_optuna_sweeper.optuna_sweeper.OptunaSweeper
+    direction: ${sweeper.direction}
+    study_name: rbibm_sweep_multi_objective
+    n_trials: 2000
+    n_jobs: 20
+
+save_model: false
+save_summary: false

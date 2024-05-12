@@ -1,0 +1,26 @@
+# @package _global_
+name: bm_all_cond
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      method: score_transformer,score_transformer_directed,score_transformer_undirected
+      method/model: score_transformer_small
+      method/sde: vesde,vpsde
+      eval: c2st
+      eval.metric.c2st.num_samples: 10000
+      eval.metric.c2st.num_evaluations: 100
+      task: two_moons_all_cond,slcp_all_cond,tree_all_cond,marcov_chain_all_cond
+      task.num_simulations: 1000,10000,100000
+
+  run:
+    dir: results/${name}
+  sweep:
+    dir: results/${name}
+    subdir: ${hydra.job.override_dirname}
+
+
+defaults:
+  - _self_
+  - override /partition: gpu

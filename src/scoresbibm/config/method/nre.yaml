@@ -1,0 +1,15 @@
+
+name: nre 
+backend: torch
+device: cpu
+params_build_posterior:
+  sample_with: 'mcmc'
+  mcmc_method: 'slice_np_vectorized'
+  mcmc_parameters:
+    num_chains: 100
+
+
+defaults:
+  - model: classifier_nn
+  - train: train_sbi
+  - posterior: slice_multi_chain_sbi

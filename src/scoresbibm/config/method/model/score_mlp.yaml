@@ -1,0 +1,5 @@
+
+
+hidden_dim: 100
+num_hidden: 6
+use_output_scale_fn: True

@@ -1,0 +1,10 @@
+
+
+
+defaults:
+   - metric:
+      - nll_likelihood 
+      - cov_likelihood
+      - nll_posterior
+      - cov_posterior
+   

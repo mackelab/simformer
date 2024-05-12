@@ -1,0 +1,5 @@
+nll_posterior:
+    num_samples: 5000
+    condition_mask_fn: posterior
+    num_steps: 200
+    batch_size: 500

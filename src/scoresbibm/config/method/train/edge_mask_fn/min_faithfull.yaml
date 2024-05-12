@@ -1,0 +1,4 @@
+
+name: min_faithfull
+top_mode: 0
+conditioned_nodes: "unchanged"

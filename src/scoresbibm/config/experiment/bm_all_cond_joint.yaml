@@ -1,0 +1,25 @@
+# @package _global_
+name: main_benchmark_all_cond_joint2
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      method: score_transformer_joint,score_transformer_joint_undirected
+      method/model: score_transformer_small
+      method/sde: vesde,vpsde
+      method.sde.scale_min: 0.
+      eval: none
+      task: two_moons_all_cond,slcp_all_cond,tree_all_cond,marcov_chain_all_cond
+      task.num_simulations: 1000,10000,100000
+
+  run:
+    dir: results/${name}
+  sweep:
+    dir: results/${name}
+    subdir: ${hydra.job.override_dirname}
+
+
+defaults:
+  - _self_
+  - override /partition: gpu

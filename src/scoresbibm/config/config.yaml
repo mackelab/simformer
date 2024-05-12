@@ -1,0 +1,24 @@
+name: benchmark
+seed: 0
+
+model_id: null
+save_model: true
+save_summary: true
+
+# Output directory for results
+hydra:
+  run:
+    dir: results/${name}/${now:%Y-%m-%d_%H-%M-%S}/local
+  sweep:
+    dir: results/${name}/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.override_dirname}
+
+defaults:
+  - _self_
+  - method: npe
+  - task: two_moons
+  - eval: c2st_posterior
+  - launcher: slurm
+  - partition: none
+  - sweeper: none
+#  - override hydra/launcher: submitit_slurm

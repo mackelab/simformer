@@ -1,0 +1,25 @@
+# @package _global_
+name: bm_lv
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      method: score_transformer_directed,score_transformer_undirected,score_transformer
+      method/model: score_transformer_large
+      method/sde: vesde
+      method.train.validation_fraction: 0.
+      eval: none
+      task: lotka_volterra
+      task.num_simulations: 1000,10000,100000
+
+  run:
+    dir: results/${name}
+  sweep:
+    dir: results/${name}
+    subdir: ${hydra.job.override_dirname}
+
+
+defaults:
+  - _self_
+  - override /partition: gpu 

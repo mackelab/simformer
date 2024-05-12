@@ -1,0 +1,4 @@
+model: "resnet"
+z_score_theta: 'independent'
+z_score_x: 'independent'
+hidden_features: 50

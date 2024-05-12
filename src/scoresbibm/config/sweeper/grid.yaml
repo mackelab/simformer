@@ -1,0 +1,26 @@
+# @package _global_
+
+sweeper:
+  name: grid
+  objective: c2st
+  direction: minimize
+
+
+defaults:
+  - override /hydra/sweeper: optuna
+  - override /hydra/sweeper/sampler: grid
+
+hydra:
+  mode: MULTIRUN
+
+  sweeper:
+    sampler:
+      _target_: optuna.samplers.GridSampler
+    _target_: hydra_plugins.hydra_optuna_sweeper.optuna_sweeper.OptunaSweeper
+    direction: ${sweeper.direction}
+    study_name: rbibm_sweep
+    n_trials: 500
+    n_jobs: 500
+
+save_model: false
+save_summary: false

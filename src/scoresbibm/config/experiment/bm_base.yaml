@@ -1,0 +1,20 @@
+# @package _global_
+name: bm_main
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      method: npe,nre,nle
+      task: gaussian_linear,gaussian_mixture,two_moons,slcp
+      task.num_simulations: 1000,10000,100000
+  run:
+    dir: results/${name}
+  sweep:
+    dir: results/${name}
+    subdir: ${hydra.job.override_dirname}
+
+
+defaults:
+  - _self_
+  - override /partition: cpu

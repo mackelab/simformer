@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="684pt" height="65.036625pt" viewBox="0 0 684 65.036625" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2024-05-08T10:12:10.839798</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 65.036625 
+L 684 65.036625 
+L 684 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1"/>
+  <g id="legend_1">
+   <g id="line2d_1">
+    <path d="M 218.462109 20.104594 
+L 227.462109 20.104594 
+L 236.462109 20.104594 
+" style="fill: none; stroke: #d73027; stroke-opacity: 0.6; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m094f15e2fc" d="M 0 1.691974 
+C 0.448717 1.691974 0.879116 1.513697 1.196406 1.196406 
+C 1.513697 0.879116 1.691974 0.448717 1.691974 0 
+C 1.691974 -0.448717 1.513697 -0.879116 1.196406 -1.196406 
+C 0.879116 -1.513697 0.448717 -1.691974 0 -1.691974 
+C -0.448717 -1.691974 -0.879116 -1.513697 -1.196406 -1.196406 
+C -1.513697 -0.879116 -1.691974 -0.448717 -1.691974 0 
+C -1.691974 0.448717 -1.513697 0.879116 -1.196406 1.196406 
+C -0.879116 1.513697 -0.448717 1.691974 0 1.691974 
+z
+" style="stroke: #d73027; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </defs>
+    <g>
+     <use xlink:href="#m094f15e2fc" x="227.462109" y="20.104594" style="fill: #d73027; fill-opacity: 0.6; stroke: #d73027; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </g>
+   </g>
+   <g id="text_1">
+    <text style="font: 9px 'Arial', sans-serif; text-anchor: start" x="243.662109" y="23.254594" transform="rotate(-0 243.662109 23.254594)">Simformer</text>
+   </g>
+   <g id="line2d_2">
+    <path d="M 218.462109 33.314906 
+L 227.462109 33.314906 
+L 236.462109 33.314906 
+" style="fill: none; stroke: #8b27d7; stroke-opacity: 0.6; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m1b975e813d" d="M 0 1.691974 
+C 0.448717 1.691974 0.879116 1.513697 1.196406 1.196406 
+C 1.513697 0.879116 1.691974 0.448717 1.691974 0 
+C 1.691974 -0.448717 1.513697 -0.879116 1.196406 -1.196406 
+C 0.879116 -1.513697 0.448717 -1.691974 0 -1.691974 
+C -0.448717 -1.691974 -0.879116 -1.513697 -1.196406 -1.196406 
+C -1.513697 -0.879116 -1.691974 -0.448717 -1.691974 0 
+C -1.691974 0.448717 -1.513697 0.879116 -1.196406 1.196406 
+C -0.879116 1.513697 -0.448717 1.691974 0 1.691974 
+z
+" style="stroke: #8b27d7; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </defs>
+    <g>
+     <use xlink:href="#m1b975e813d" x="227.462109" y="33.314906" style="fill: #8b27d7; fill-opacity: 0.6; stroke: #8b27d7; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </g>
+   </g>
+   <g id="text_2">
+    <text style="font: 9px 'Arial', sans-serif; text-anchor: start" x="243.662109" y="36.464906" transform="rotate(-0 243.662109 36.464906)">Simformer (posterior only)</text>
+   </g>
+   <g id="line2d_3">
+    <path d="M 381.027422 20.104594 
+L 390.027422 20.104594 
+L 399.027422 20.104594 
+" style="fill: none; stroke: #f25d1d; stroke-opacity: 0.6; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m92df602f98" d="M 0 1.691974 
+C 0.448717 1.691974 0.879116 1.513697 1.196406 1.196406 
+C 1.513697 0.879116 1.691974 0.448717 1.691974 0 
+C 1.691974 -0.448717 1.513697 -0.879116 1.196406 -1.196406 
+C 0.879116 -1.513697 0.448717 -1.691974 0 -1.691974 
+C -0.448717 -1.691974 -0.879116 -1.513697 -1.196406 -1.196406 
+C -1.513697 -0.879116 -1.691974 -0.448717 -1.691974 0 
+C -1.691974 0.448717 -1.513697 0.879116 -1.196406 1.196406 
+C -0.879116 1.513697 -0.448717 1.691974 0 1.691974 
+z
+" style="stroke: #f25d1d; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </defs>
+    <g>
+     <use xlink:href="#m92df602f98" x="390.027422" y="20.104594" style="fill: #f25d1d; fill-opacity: 0.6; stroke: #f25d1d; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </g>
+   </g>
+   <g id="text_3">
+    <text style="font: 9px 'Arial', sans-serif; text-anchor: start" x="406.227422" y="23.254594" transform="rotate(-0 406.227422 23.254594)">Simformer (directed graph)</text>
+   </g>
+   <g id="line2d_4">
+    <path d="M 381.027422 33.314906 
+L 390.027422 33.314906 
+L 399.027422 33.314906 
+" style="fill: none; stroke: #911c1c; stroke-opacity: 0.6; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m3d8c3628d8" d="M 0 1.691974 
+C 0.448717 1.691974 0.879116 1.513697 1.196406 1.196406 
+C 1.513697 0.879116 1.691974 0.448717 1.691974 0 
+C 1.691974 -0.448717 1.513697 -0.879116 1.196406 -1.196406 
+C 0.879116 -1.513697 0.448717 -1.691974 0 -1.691974 
+C -0.448717 -1.691974 -0.879116 -1.513697 -1.196406 -1.196406 
+C -1.513697 -0.879116 -1.691974 -0.448717 -1.691974 0 
+C -1.691974 0.448717 -1.513697 0.879116 -1.196406 1.196406 
+C -0.879116 1.513697 -0.448717 1.691974 0 1.691974 
+z
+" style="stroke: #911c1c; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </defs>
+    <g>
+     <use xlink:href="#m3d8c3628d8" x="390.027422" y="33.314906" style="fill: #911c1c; fill-opacity: 0.6; stroke: #911c1c; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </g>
+   </g>
+   <g id="text_4">
+    <text style="font: 9px 'Arial', sans-serif; text-anchor: start" x="406.227422" y="36.464906" transform="rotate(-0 406.227422 36.464906)">Simformer (undirected graph)</text>
+   </g>
+   <g id="line2d_5">
+    <path d="M 558.903984 20.104594 
+L 567.903984 20.104594 
+L 576.903984 20.104594 
+" style="fill: none; stroke: #154c79; stroke-opacity: 0.6; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="mc45aa0c66e" d="M 0 1.691974 
+C 0.448717 1.691974 0.879116 1.513697 1.196406 1.196406 
+C 1.513697 0.879116 1.691974 0.448717 1.691974 0 
+C 1.691974 -0.448717 1.513697 -0.879116 1.196406 -1.196406 
+C 0.879116 -1.513697 0.448717 -1.691974 0 -1.691974 
+C -0.448717 -1.691974 -0.879116 -1.513697 -1.196406 -1.196406 
+C -1.513697 -0.879116 -1.691974 -0.448717 -1.691974 0 
+C -1.691974 0.448717 -1.513697 0.879116 -1.196406 1.196406 
+C -0.879116 1.513697 -0.448717 1.691974 0 1.691974 
+z
+" style="stroke: #154c79; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </defs>
+    <g>
+     <use xlink:href="#mc45aa0c66e" x="567.903984" y="20.104594" style="fill: #154c79; fill-opacity: 0.6; stroke: #154c79; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font: 9px 'Arial', sans-serif; text-anchor: start" x="584.103984" y="23.254594" transform="rotate(-0 584.103984 23.254594)">NPE</text>
+   </g>
+   <g id="line2d_6">
+    <path d="M 558.903984 33.314906 
+L 567.903984 33.314906 
+L 576.903984 33.314906 
+" style="fill: none; stroke: #fdae61; stroke-opacity: 0.6; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m39829dce28" d="M 0 1.691974 
+C 0.448717 1.691974 0.879116 1.513697 1.196406 1.196406 
+C 1.513697 0.879116 1.691974 0.448717 1.691974 0 
+C 1.691974 -0.448717 1.513697 -0.879116 1.196406 -1.196406 
+C 0.879116 -1.513697 0.448717 -1.691974 0 -1.691974 
+C -0.448717 -1.691974 -0.879116 -1.513697 -1.196406 -1.196406 
+C -1.513697 -0.879116 -1.691974 -0.448717 -1.691974 0 
+C -1.691974 0.448717 -1.513697 0.879116 -1.196406 1.196406 
+C -0.879116 1.513697 -0.448717 1.691974 0 1.691974 
+z
+" style="stroke: #fdae61; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </defs>
+    <g>
+     <use xlink:href="#m39829dce28" x="567.903984" y="33.314906" style="fill: #fdae61; fill-opacity: 0.6; stroke: #fdae61; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </g>
+   </g>
+   <g id="text_6">
+    <text style="font: 9px 'Arial', sans-serif; text-anchor: start" x="584.103984" y="36.464906" transform="rotate(-0 584.103984 36.464906)">NSPE</text>
+   </g>
+   <g id="line2d_7">
+    <path d="M 625.664297 20.104594 
+L 634.664297 20.104594 
+L 643.664297 20.104594 
+" style="fill: none; stroke: #1e81b0; stroke-opacity: 0.6; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m3712e4746d" d="M 0 1.691974 
+C 0.448717 1.691974 0.879116 1.513697 1.196406 1.196406 
+C 1.513697 0.879116 1.691974 0.448717 1.691974 0 
+C 1.691974 -0.448717 1.513697 -0.879116 1.196406 -1.196406 
+C 0.879116 -1.513697 0.448717 -1.691974 0 -1.691974 
+C -0.448717 -1.691974 -0.879116 -1.513697 -1.196406 -1.196406 
+C -1.513697 -0.879116 -1.691974 -0.448717 -1.691974 0 
+C -1.691974 0.448717 -1.513697 0.879116 -1.196406 1.196406 
+C -0.879116 1.513697 -0.448717 1.691974 0 1.691974 
+z
+" style="stroke: #1e81b0; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </defs>
+    <g>
+     <use xlink:href="#m3712e4746d" x="634.664297" y="20.104594" style="fill: #1e81b0; fill-opacity: 0.6; stroke: #1e81b0; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </g>
+   </g>
+   <g id="text_7">
+    <text style="font: 9px 'Arial', sans-serif; text-anchor: start" x="650.864297" y="23.254594" transform="rotate(-0 650.864297 23.254594)">NLE</text>
+   </g>
+   <g id="line2d_8">
+    <path d="M 625.664297 33.314906 
+L 634.664297 33.314906 
+L 643.664297 33.314906 
+" style="fill: none; stroke: #76b5c5; stroke-opacity: 0.6; stroke-width: 2.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m4da7b1b16e" d="M 0 1.691974 
+C 0.448717 1.691974 0.879116 1.513697 1.196406 1.196406 
+C 1.513697 0.879116 1.691974 0.448717 1.691974 0 
+C 1.691974 -0.448717 1.513697 -0.879116 1.196406 -1.196406 
+C 0.879116 -1.513697 0.448717 -1.691974 0 -1.691974 
+C -0.448717 -1.691974 -0.879116 -1.513697 -1.196406 -1.196406 
+C -1.513697 -0.879116 -1.691974 -0.448717 -1.691974 0 
+C -1.691974 0.448717 -1.513697 0.879116 -1.196406 1.196406 
+C -0.879116 1.513697 -0.448717 1.691974 0 1.691974 
+z
+" style="stroke: #76b5c5; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </defs>
+    <g>
+     <use xlink:href="#m4da7b1b16e" x="634.664297" y="33.314906" style="fill: #76b5c5; fill-opacity: 0.6; stroke: #76b5c5; stroke-opacity: 0.6; stroke-width: 2.025"/>
+    </g>
+   </g>
+   <g id="text_8">
+    <text style="font: 9px 'Arial', sans-serif; text-anchor: start" x="650.864297" y="36.464906" transform="rotate(-0 650.864297 36.464906)">NRE</text>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,7 @@
+c2st_likelihood:
+    n_folds: 5
+    metric: "accuracy"
+    classifier: "rf"
+    condition_mask_fn: likelihood
+    num_samples: 2000
+    num_evaluations: 50

@@ -1,0 +1,14 @@
+token_dim: 40
+condition_token_dim: 10
+condition_token_init_scale: 0.1
+condition_token_init_mean: 0.
+condition_mode: 'concat'
+time_embedding_dim: 128
+num_heads: 4
+num_layers: 6
+attn_size: 10
+widening_factor: 3
+num_hidden_layers: 1
+skip_connection_attn: True
+skip_connection_mlp: True
+layer_norm: True

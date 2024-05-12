@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="100%" height="100%" viewBox="0 25 480 340">
+<title>Hodgkin-Huxley Model</title>
+<desc>
+	Schematic of the basic Hodgkin-Huxley model of a neuron.
+</desc>
+<defs>
+	<marker id="EndArrow" viewBox="0 0 10 10" refX="10" refY="5"
+		markerUnits="strokeWidth" orient="auto"
+		markerWidth="5" markerHeight="5">
+		<polyline points="10,5 0,10 4,5 0,0 10,5" fill="black" />
+	</marker>
+	<g id="term" style="stroke:black;stroke-width:2.5;fill:none">
+		<path d="M0,0 V25" />
+		<circle cx="0" cy="30" r="5" />
+	</g>
+</defs>
+<g style="stroke:black;stroke-width:3;fill:none">
+	<path d="M25,195 h50 M25,205 h50" />
+	<path d="M50,195 V100 H450 V175 M450,225 V300 H50 V205" />
+	<circle cx="450" cy="200" r="25" />
+	<path d="M450,185 V215" marker-end="url(#EndArrow)" />
+	<use xlink:href="#term" transform="translate(250,300)" />
+	<use xlink:href="#term" transform="translate(250,100) scale(1,-1)" />
+	<g stroke-width="2">
+		<g id="set1">
+			<rect x="175" y="135" width="20" height="70" stroke-width="3" />
+			<path d="M185,100 V135 M185,205 v40 M185,255 V300" />
+			<path d="M185,135 l5,7 -10,7 10,7 -10,7 10,7 -10,7 10,7 -10,7 10,7 -10,7" />
+			<path d="M165,245 h40 M175,255 h20" />
+		</g>
+		<rect x="175" y="205" width="20" height="10" fill="black" stroke-width="3"/>
+		<use xlink:href="#set1" transform="translate(140)" />
+	</g>
+</g>
+<text style="stroke:none;fill:black;font-size:25" font-family="DejaVu Serif" >
+	<tspan x="100" y="50">Extracellular Medium</tspan>
+	<tspan x="115" y="360">Intracellular Medium</tspan>
+	<tspan x="5" y="180">C</tspan><tspan dy="5" font-size="15">m</tspan>
+	<tspan x="90" y="170">g</tspan><tspan dy="5" font-size="15">n</tspan><tspan dy="-5">(t,V)</tspan>
+	<tspan x="135" y="270">E</tspan><tspan dy="5" font-size="15">n</tspan>
+	<tspan x="280" y="170">g</tspan><tspan dy="5" font-size="15">L</tspan>
+	<tspan x="280" y="270">E</tspan><tspan dy="5" font-size="15">L</tspan>
+	<tspan x="400" y="220">I</tspan><tspan dy="5" font-size="15">p</tspan>
+</text>
+</svg>

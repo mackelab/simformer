@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+
+name: score_transformer_undirected
+backend: jax
+device: gpu
+
+
+defaults:
+  - model: score_transformer_small
+  - train: train_score_transformer
+  - sde: vesde
+  - posterior: backward_sde
+  - override train/edge_mask_fn: undirected
+  
+
+
+
+
+

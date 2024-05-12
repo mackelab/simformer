@@ -1,0 +1,5 @@
+
+sample_with: 'mcmc'
+mcmc_method: 'slice_np_vectorized'
+mcmc_parameters:
+  num_chains: 1

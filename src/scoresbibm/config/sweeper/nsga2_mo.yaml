@@ -1,0 +1,39 @@
+# @package _global_
+
+sweeper:
+  name: nsga2_multi_objective
+  objective:
+    - c2st
+    - c2st
+  direction:
+    - minimize
+    - minimize
+
+
+
+defaults:
+  - override /hydra/sweeper: optuna
+  - override /hydra/sweeper/sampler: nsgaii
+
+
+
+
+hydra:
+  mode: MULTIRUN
+
+  sweeper:
+    sampler:
+      _target_: optuna.samplers.NSGAIISampler
+      seed: 0
+      population_size: 50
+      mutation_prob: null
+      crossover_prob: 0.9
+      swapping_prob: 0.5
+    _target_: hydra_plugins.hydra_optuna_sweeper.optuna_sweeper.OptunaSweeper
+    direction: ${sweeper.direction}
+    study_name: rbibm_sweep_multi_objective
+    n_trials: 500
+    n_jobs: 20
+
+save_model: false
+save_summary: false

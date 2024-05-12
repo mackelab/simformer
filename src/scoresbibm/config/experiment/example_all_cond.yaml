@@ -1,0 +1,24 @@
+# @package _global_
+name: example
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      method: score_transformer_undirected
+      method/model: score_transformer_small
+      method/sde: vesde
+      eval: none
+      task: two_moons_all_cond,slcp_all_cond
+      task.num_simulations: 100000
+
+  run:
+    dir: results/${name}
+  sweep:
+    dir: results/${name}
+    subdir: ${hydra.job.override_dirname}
+
+
+defaults:
+  - _self_
+  - override /launcher: local

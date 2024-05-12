@@ -1,0 +1,9 @@
+
+name: "structured_random"
+p_joint: 0.2
+p_posterior: 0.2
+p_likelihood: 0.2
+p_rnd1: 0.2
+p_rnd2: 0.2
+rnd1_prob: 0.3
+rnd2_prob: 0.7

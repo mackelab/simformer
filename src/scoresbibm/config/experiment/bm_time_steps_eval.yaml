@@ -1,0 +1,25 @@
+# @package _global_
+name: bm_time_steps
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model_id: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+      eval: c2st_posterior
+      method: score_transformer
+      method/model: score_transformer_small
+      method/posterior: backward_sde
+      method.posterior.num_steps: 5,10,50,100,250,500,750,1000
+      save_model: false
+    
+  run:
+    dir: results/${name}
+  sweep:
+    dir: results/${name}
+    subdir: ${hydra.job.override_dirname}
+
+
+defaults:
+  - _self_
+  - override /partition: gpu

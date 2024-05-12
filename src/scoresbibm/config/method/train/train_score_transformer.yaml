@@ -1,0 +1,17 @@
+max_number_steps: 100000
+min_number_steps: 5000
+total_number_steps_scaling: 3
+training_batch_size: 1000
+learning_rate: 1e-3
+min_learning_rate: 1e-6
+clip_max_norm: 10.
+validation_fraction: 0.05
+val_repeat: 5
+val_every: 50
+stop_early_count: 5
+rebalance_loss: False
+z_score_data: False
+
+defaults:
+  - condition_mask_fn: structured_random
+  - edge_mask_fn: none

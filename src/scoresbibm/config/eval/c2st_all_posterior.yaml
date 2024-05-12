@@ -1,0 +1,7 @@
+
+
+
+defaults:
+   - metric:
+      - c2st
+      - c2st_posterior

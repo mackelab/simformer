@@ -1,0 +1,26 @@
+# @package _global_
+name: main_benchmark_all_cond_joint2
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      model_id: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48
+      eval: c2st
+      eval.metric.c2st.num_samples: 5000
+      eval.metric.c2st.num_evaluations: 100
+      method/posterior: repaint_sde,generalized_guidance
+      method.sde.scale_min: 0.
+      method.posterior.resampling_steps: 0,5
+      save_model: false
+
+  run:
+    dir: results/${name}
+  sweep:
+    dir: results/${name}
+    subdir: ${hydra.job.override_dirname}
+
+
+defaults:
+  - _self_
+  - override /partition: gpu

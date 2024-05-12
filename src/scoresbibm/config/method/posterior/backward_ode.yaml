@@ -1,0 +1,4 @@
+
+sampling_method: "ode"
+num_steps: 500
+method: heun

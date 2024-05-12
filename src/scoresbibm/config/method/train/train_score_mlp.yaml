@@ -1,0 +1,6 @@
+
+max_num_epochs: 10000
+total_number_steps_scaling: 5.
+training_batch_size: 1000
+learning_rate: 5e-4
+clip_max_norm: 5.

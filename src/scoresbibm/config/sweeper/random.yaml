@@ -1,0 +1,28 @@
+# @package _global_
+
+sweeper:
+  name: random
+  objective: c2st
+  direction: minimize
+
+
+defaults:
+  - override /hydra/sweeper: optuna
+  - override /hydra/sweeper/sampler: random
+
+hydra:
+  mode: MULTIRUN
+
+  sweeper:
+    sampler:
+      _target_: optuna.samplers.RandomSampler
+      seed: 0
+    _target_: hydra_plugins.hydra_optuna_sweeper.optuna_sweeper.OptunaSweeper
+    direction: ${sweeper.direction}
+    study_name: rbibm_sweep
+    n_trials: 5
+    n_jobs: 30
+
+
+save_model: false
+save_summary: false

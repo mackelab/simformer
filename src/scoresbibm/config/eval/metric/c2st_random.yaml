@@ -1,0 +1,7 @@
+c2st_random:
+    n_folds: 5
+    metric: "accuracy"
+    classifier: "rf"
+    condition_mask_fn: random
+    num_samples: 2000
+    num_evaluations: 50

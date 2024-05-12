@@ -1,0 +1,10 @@
+
+name: npe 
+backend: torch
+device: cpu
+
+
+defaults:
+  - model: posterior_nn
+  - train: train_sbi
+  - posterior: none
