@@ -1,8 +1,13 @@
 
+
+try:
+    from sbi.analysis import pairplot
+except:
+    pass
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-from sbi.analysis import pairplot
 
 import numpy as np
 import jax
@@ -22,7 +27,6 @@ def is_installed(package_name):
 def install_packages():
     if not is_installed("probjax"):
         print("Incomplete installation. Installing packages...")
-        os.system("git clone git@github.com:mackelab/simformer_private.git") # Clone the public repo
         os.system("pip install nvidia-cuda-runtime-cu12==12.3.101 -q")
         os.system("pip install  nvidia-cublas-cu12==12.3.4.1 -q")
         os.system("pip install nvidia-cuda-cupti-cu12==12.3.101 -q")
@@ -36,8 +40,10 @@ def install_packages():
         os.system("pip install nvidia-nccl-cu12==2.19.3 -q")
         os.system("pip install nvidia-nvjitlink-cu12==12.3.101 -q")
         
-        os.system("pip install -e -q simformer_private/src/probjax[cuda]")
-        os.system("pip install -e -q simformer_private/src/scoresbibm")
+        
+        os.system("pip install -e simformer/src/probjax[cuda]")
+        os.system("pip install -e simformer/src/scoresbibm")
+        os.system("pip install ipympl -q --root-user-action=ignore")
     else:
         os.system("pip install ipympl -q --root-user-action=ignore")
 
