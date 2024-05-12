@@ -44,6 +44,9 @@ def install_packages():
         os.system("pip install -e simformer/src/probjax[cuda]")
         os.system("pip install -e simformer/src/scoresbibm")
         os.system("pip install ipympl -q --root-user-action=ignore")
+        
+        print("Killing Kernel for restart")
+        os.kill(os.getpid(), 9)
     else:
         os.system("pip install ipympl -q --root-user-action=ignore")
 
