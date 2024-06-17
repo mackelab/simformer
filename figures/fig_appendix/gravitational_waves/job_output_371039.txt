@@ -1,0 +1,3 @@
+/mnt/qb/work/macke/mgloeckler90/simformer/figures/fig_appendix/gravitational_waves/gw_coverage1.py:91: DeprecationWarning: jax.tree_flatten is deprecated: use jax.tree_util.tree_flatten.
+  flat_data, tree = jax.tree_flatten(data)
+slurmstepd: error: *** JOB 371039 ON galvani-cn211 CANCELLED AT 2024-05-26T16:38:07 DUE TO TIME LIMIT ***

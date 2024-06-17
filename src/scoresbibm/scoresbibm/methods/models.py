@@ -725,7 +725,7 @@ class AllConditionalScoreModel(AllConditionalModel):
         ):
         # Add backward ode to compute log_prob
         assert condition_mask is not None, "Please provide a condition mask"
-        
+        node_id, condition_mask = self._check_id_condition_mask(node_id, condition_mask)
         meta_data = self._check_for_meta_data(meta_data)
         edge_mask = self._check_edge_mask(edge_mask, node_id, condition_mask, meta_data)
         if x_o.shape[0] > 0:
@@ -740,7 +740,7 @@ class AllConditionalScoreModel(AllConditionalModel):
  
         condition_mask = np.array(condition_mask) # Make sure it's will be treated as static by jit
         
-        q = self._init_cns(x_o, num_steps, node_id=self.node_id, condition_mask=condition_mask, edge_mask=edge_mask, meta_data=meta_data, **kwargs)
+        q = self._init_cns(x_o, num_steps, node_id=node_id, condition_mask=condition_mask, edge_mask=edge_mask, meta_data=meta_data, **kwargs)
         return q.log_prob(val)
     
     
@@ -908,7 +908,10 @@ class AllConditionalScoreModel(AllConditionalModel):
             y = odeint(drift_cond, x_T, jnp.linspace(0., self.T_max -self.T_min, num_steps),**kwargs)[-1]
             return y
         
-        q0 = Independent(Normal(self.marginal_end_mean[~condition_mask], self.marginal_end_std[~condition_mask]),1)
+        if node_id is None:
+            q0 = Independent(Normal(self.marginal_end_mean[~condition_mask], self.marginal_end_std[~condition_mask]),1)
+        else:
+            q0 = Independent(Normal(self.marginal_end_mean[node_id][~condition_mask], self.marginal_end_std[node_id][~condition_mask]),1)
         q = TransformedDistribution(q0, f)
         return q
     

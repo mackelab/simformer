@@ -418,7 +418,7 @@ register_stochastic_runge_kutta_method(
 )
 
 
-@partial(jax.jit, static_argnums=(1, 2, 5, 6, 7, 8, 9, 10))
+@partial(jax.jit, static_argnums=(1, 2, 5, 6, 7, 8, 9, 10,11))
 def _sdeint_on_grid(
     key: PRNGKeyArray,
     drift: Callable,
@@ -430,6 +430,7 @@ def _sdeint_on_grid(
     noise_type: str,
     iterated_integral_fn: Union[Callable, None],
     return_brownian: bool = True,
+    only_final: bool = False,
     scan_unroll: int = 1,
 ) -> Array:
     """Solve a stochastic differential equation on a grid.
@@ -473,9 +474,15 @@ def _sdeint_on_grid(
         )
 
         if return_brownian:
-            return (key, y1, t1, f1, g1), (y1, dWt)
+            if not only_final:
+                return (key, y1, t1, f1, g1), (y1, dWt)
+            else:
+                return (key, y1, t1, f1, g1), None
         else:
-            return (key, y1, t1, f1, g1), y1
+            if not only_final:
+                return (key, y1, t1, f1, g1), y1
+            else:
+                return (key, y1, t1, f1, g1), None
 
     t0 = ts[0]
     f0 = drift(t0, y0)
@@ -502,9 +509,11 @@ def _sdeint_on_grid(
             jnp.concatenate((jnp.zeros_like(y0[None]), Ws), axis=0), axis=0
         )
     else:
-        _, ys = lax.scan(scan_fun, init_carry, (ts[1:], dts), unroll=scan_unroll)
-        return jnp.concatenate((y0[None], ys))
-
+        carry, ys = lax.scan(scan_fun, init_carry, (ts[1:], dts), unroll=scan_unroll)
+        if only_final:
+            return carry[1]
+        else:
+            return jnp.concatenate((y0[None], ys))
 
 def sdeint(
     key: PRNGKeyArray,
