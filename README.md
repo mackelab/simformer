@@ -57,20 +57,20 @@ In the `figures` folder, we provide notebooks to create the plots from the paper
 We provide a set of examples to demonstrate the method and its capabilities in the `examples` directory.
 
 This currently includes a
-* [Example 1](1_minimal_code_example.ipynb): Minimal code example.<a target="_blank" href="https://colab.research.google.com/github/mackelab/simformer/blob/main/example/1_minimal_code_example.ipynb">
+* [Example 1](example/1_minimal_code_example.ipynb): Minimal code example.<a target="_blank" href="https://colab.research.google.com/github/mackelab/simformer/blob/main/example/1_minimal_code_example.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-* [Example 2](2_two_moons_example.ipynb): Two moons interactive plot + guidance <a target="_blank" href="https://colab.research.google.com/github/mackelab/simformer/blob/main/example/2_two_moons_example.ipynb">
+* [Example 2](example/2_two_moons_example.ipynb): Two moons interactive plot + guidance <a target="_blank" href="https://colab.research.google.com/github/mackelab/simformer/blob/main/example/2_two_moons_example.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-* [Example 3](3_slcp_example.ipynb): SLCP interactive plot.<a target="_blank" href="https://colab.research.google.com/github/mackelab/simformer/blob/main/example/3_slcp_example.ipynb">
+* [Example 3](example/3_slcp_example.ipynb): SLCP interactive plot.<a target="_blank" href="https://colab.research.google.com/github/mackelab/simformer/blob/main/example/3_slcp_example.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 
-# Citation
+## Citation
 
 If you use this code, please cite the following [paper](https://arxiv.org/abs/2404.09636):
 
