@@ -16,6 +16,7 @@ import jax.numpy as jnp
 
 import os
 import pkg_resources
+import time
 
 def is_installed(package_name):
     try:
@@ -36,7 +37,9 @@ def install_packages():
         os.system("pip install -e simformer/src/scoresbibm")
         os.system("pip install ipympl -q --root-user-action=ignore")
 
+        print("Installation complete")
         print("Killing Kernel for restart")
+        time.sleep(0.5)
         os.kill(os.getpid(), 9)
     else:
         os.system("pip install ipympl -q --root-user-action=ignore")
