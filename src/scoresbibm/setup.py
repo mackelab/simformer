@@ -18,7 +18,9 @@ REQUIRED = [
     "numpy",
     "matplotlib",
     "jax",
-    "torch@http://download.pytorch.org/whl/cpu-cxx11-abi/torch-2.1.0%2Bcpu.cxx11.abi-cp310-cp310-linux_x86_64.whl#sha256=88f1ee550c6291af8d0417871fb7af84b86527d18bc02ac4249f07dcd84dda56",
+    # To install CPU-only torch, see the README or install manually with:
+    # pip install torch==2.1.0+cpu torchvision==0.16.0+cpu torchaudio==2.1.0+cpu --index-url https://download.pytorch.org/whl/cpu
+    "torch==2.1.0",
     "torchaudio",
     "torchvision",
     "hydra-core",
@@ -32,7 +34,19 @@ REQUIRED = [
     "pandas",
 ]
 
-setup(name=NAME,version=VERSION, description=DESCRIPTION, author=AUTHOR,package_dir={"scoresbibm": "scoresbibm"}, install_requires=REQUIRED, entry_points=entry_points)
+os.system(
+    "pip install torch==2.1.0+cpu --index-url https://download.pytorch.org/whl/cpu"
+)
+
+setup(
+    name=NAME,
+    version=VERSION,
+    description=DESCRIPTION,
+    author=AUTHOR,
+    package_dir={"scoresbibm": "scoresbibm"},
+    install_requires=REQUIRED,
+    entry_points=entry_points,
+)
 
 # Do not print the output of the following command
 os.system("pip install sbibm --no-deps -q")

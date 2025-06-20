@@ -22,7 +22,7 @@ REQUIRED = [
     "numpy==1.26.3",
     "scipy==1.11.4",
     "matplotlib",
-    "jax==0.4.23", 
+    "jax==0.4.23",
     "jaxlib==0.4.23",
     "dm-haiku<=0.0.11",
     "optax",
@@ -35,6 +35,9 @@ REQUIRED = [
 
 EXTRAS = {
     "cuda": [
+            'jax[cuda12]==0.4.23',
+        ],
+    "cuda_fix": [
             'nvidia-cudnn-cu12==8.9.7.29',
             'jaxlib@https://storage.googleapis.com/jax-releases/cuda12/jaxlib-0.4.23+cuda12.cudnn89-cp310-cp310-manylinux2014_x86_64.whl',
         ],
