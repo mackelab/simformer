@@ -32,6 +32,8 @@ def install_packages():
         os.system("pip install nvidia-cudnn-cu12==8.9.7.29") # Fix for jaxlib
         os.system("pip install -e simformer/src/probjax")
         os.system("pip install -e simformer/src/scoresbibm")
+        # First attempt can fail in colab for some reason
+        os.system("pip install -e simformer/src/scoresbibm")
         os.system("pip install ipympl -q --root-user-action=ignore")
 
         print("Killing Kernel for restart")
