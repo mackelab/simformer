@@ -27,7 +27,9 @@ def is_installed(package_name):
 def install_packages():
     if not is_installed("probjax"):
         print("Incomplete installation. Installing packages...")
+
         os.system("pip install jax[cuda12]==0.4.23")
+        os.system("pip install nvidia-cudnn-cu12==8.9.7.29") # Fix for jaxlib
         os.system("pip install -e simformer/src/probjax")
         os.system("pip install -e simformer/src/scoresbibm")
         os.system("pip install ipympl -q --root-user-action=ignore")
